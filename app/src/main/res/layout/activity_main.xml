@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <com.github.hyr0318.customview_library.CustomView
+        android:id="@+id/custom1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cv_is_show_border="true"
+        app:cv_center_textStr="@string/type1"/>
+
+    <com.github.hyr0318.customview_library.CustomView
+        android:id="@+id/custom2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cv_is_show_bottom_line="true"
+        app:cv_center_textStr="@string/type2"/>
+
+    <com.github.hyr0318.customview_library.CustomView
+        android:id="@+id/custom3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cv_is_show_bottom_line="true"
+        app:cv_center_textStr="@string/type3"/>
+
+    <com.github.hyr0318.customview_library.CustomView
+        android:id="@+id/custom4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cv_is_show_bottom_line="true"
+        app:cv_center_textStr="@string/type4"/>
+</LinearLayout>

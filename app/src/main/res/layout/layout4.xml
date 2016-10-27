@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.github.hyr0318.customview_library.CustomView
+       android:id="@+id/cccc"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cv_right_button="@drawable/obtain_blue"
+        app:cv_right_button_height="40dp"
+        app:cv_right_button_width="50dp"
+        android:onClick="onClick"
+        app:cv_right_button_text="点我"
+        app:cv_is_show_bottom_line="true"
+        app:cv_right_button_text_color="@color/white"/>
+
+    <com.github.hyr0318.customview_library.CustomView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cv_right_editText_color="@color/colorPrimary"
+        app:cv_right_editText_hint_str="右边EditText"/>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CustomView</string>
+    <string name="type1">设置界面通用类型</string>
+    <string name="type2">居中显示图片和文字</string>
+    <string name="type3">左边显示图片文字</string>
+    <string name="type4">右边Button和EditText</string>
+</resources>

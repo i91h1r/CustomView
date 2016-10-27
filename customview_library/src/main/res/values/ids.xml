@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="mLeftText"
+        type="id"/>
+    <item name="right_image_id"
+        type="id"/>
+    <item name="right_button_id"
+        type="id">
+    </item>
+    <item name="left_image_id"
+        type="id"/>
+    <item name="center_image_id"
+        type="id"/>
+    <item name="right_editText"
+        type="id"/>
+    <item name="right_textView1"
+        type="id"/>
+    <item name="right_textView2"
+        type="id"/>
+    <item name="center_text_id"
+        type="id"/>
+    <item name="left_text_id"
+        type="id"/>
+</resources>
