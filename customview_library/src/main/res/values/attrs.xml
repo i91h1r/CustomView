@@ -53,8 +53,6 @@
             format="dimension"></attr>
         <attr name="cv_center_text_color"
             format="color"></attr>
-        <attr name="cv_right_text_str"
-            format="string"></attr>
         <attr name="cv_right_text_marginRight"
             format="dimension"></attr>
         <attr name="cv_right_text_color"
@@ -109,6 +107,13 @@
         <attr name="cv_right_text_margin_top"
             format="dimension"></attr>
         <attr name="cv_right_text_margin_bottom"
+            format="dimension"></attr>
+        <attr name="cv_left_editText_hint"
+            format="string"></attr>
+
+        <attr name="cv_left_editText_color"
+            format="color"></attr>
+        <attr name="cv_left_editText_size"
             format="dimension"></attr>
     </declare-styleable>
 </resources>

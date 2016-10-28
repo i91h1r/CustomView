@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 /**
  * Description:
- * 作者：hyr on 2016/10/25 17:53
+ * 作者：hyr on 2016/7/25 17:53
  * 邮箱：2045446584@qq.com
  */
 public class CustomView extends RelativeLayout {
@@ -63,8 +63,6 @@ public class CustomView extends RelativeLayout {
     private String mRightTextStr3;
     private int mRightTextMarginRight;
     private int defMarginRiht = 10;
-    private int mRightTextColor;
-    private int mRightTextSize;
     private boolean isShowTopLine;
     private boolean isShowBottomLine;
     private int defaultLineColor = 0xFFE8E8E8;
@@ -89,6 +87,9 @@ public class CustomView extends RelativeLayout {
     private int mRightTextMarginLeft;
     private int mRightTextMarginTop;
     private int mRightTextMarginBottom;
+    private String mLeftEditTextHint;
+    private int mLeftEditTextSize;
+    private int mLeftEditTextColor;
 
 
     public CustomView(Context context) {
@@ -159,7 +160,44 @@ public class CustomView extends RelativeLayout {
         if (mRightEditTextHint != null) {
             initEditText();
         }
+
+        if (mLeftEditTextHint != null) {
+            initLeftEditText();
+        }
         initBackgroudColor();
+    }
+
+
+    /**
+     * 设置左边编辑框
+     */
+    @SuppressLint("NewApi") private void initLeftEditText() {
+
+        EditText editText = new EditText(mContext);
+
+        LayoutParams layoutParams = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT);
+
+        layoutParams.addRule(RelativeLayout.CENTER_VERTICAL, TRUE);
+
+        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
+        layoutParams.addRule(LEFT_OF, R.id.center_image_id);
+        layoutParams.addRule(LEFT_OF,R.id.center_text_id);
+        layoutParams.setMargins(marginLeft, 0, 0, 0);
+
+        editText.setHint(mLeftEditTextHint);
+
+        editText.setSelection(editText.length());
+
+        editText.setBackground(null);
+
+        editText.setTextColor(mLeftEditTextColor);
+
+        editText.setTextSize(TypedValue.COMPLEX_UNIT_PX, mLeftEditTextSize);
+
+        editText.setLayoutParams(layoutParams);
+
+        addView(editText);
     }
 
 
@@ -613,12 +651,6 @@ public class CustomView extends RelativeLayout {
         mRightTextMarginRight = typedArray.getDimensionPixelSize(
             R.styleable.CustomView_cv_right_text_marginRight, defMarginRiht);
 
-        mRightTextColor = typedArray.getColor(
-            R.styleable.CustomView_cv_right_text_color, defaultTextColor);
-
-        mRightTextSize = typedArray.getDimensionPixelSize(
-            R.styleable.CustomView_cv_right_text_size, defaultTextSize);
-
         isShowTopLine = typedArray.getBoolean(R.styleable.CustomView_cv_is_show_top_line, false);
 
         isShowBottomLine = typedArray.getBoolean(R.styleable.CustomView_cv_is_show_bottom_line,
@@ -673,7 +705,12 @@ public class CustomView extends RelativeLayout {
 
         mRightTextMarginBottom = typedArray.getDimensionPixelSize(
             R.styleable.CustomView_cv_right_text_margin_bottom, defMarginLeft);
+        mLeftEditTextHint = typedArray.getString(R.styleable.CustomView_cv_left_editText_hint);
+        mLeftEditTextSize = typedArray.getDimensionPixelSize(
+            R.styleable.CustomView_cv_left_editText_size, defaultTextSize);
 
+        mLeftEditTextColor = typedArray.getColor(R.styleable.CustomView_cv_left_editText_color,
+            defaultTextColor);
         typedArray.recycle();
     }
 

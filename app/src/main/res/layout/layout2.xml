@@ -23,6 +23,7 @@
         app:cv_center_icon="@mipmap/yinlian"
         app:cv_is_show_bottom_line="true"/>
     <com.github.hyr0318.customview_library.CustomView
+        app:cv_left_editText_hint="新密码"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:cv_center_textStr="中间文字"
