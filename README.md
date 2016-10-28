@@ -50,7 +50,7 @@
 
 >使用方法
 
-*	Gradle中添加：`compile 'cn.huangyirui.android:customview_library:1.0'`	
+*	Gradle中添加：`compile 'com.hyr:customview:1.0'`	
 
 *	` xmlns:app="http://schemas.android.com/apk/res-auto"`
 
